@@ -1,0 +1,175 @@
+:root {
+    --bg-alt-primary: rgb(10, 110, 50);
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+---- GLOBAL STYLE
+*/
+input {
+    background-color: white;
+    border: 2px black solid;
+    font-size: large;
+    padding: 3px;
+}
+
+/*
+---- LOGIN STYLE
+*/
+#login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#login > * {
+    height: 100%;
+}
+
+#login > .left-card {
+    flex-grow: 1;
+    background-color: var(--bg-alt-primary);
+}
+
+#login input.error {
+    position: relative;
+    border-color: red;
+}
+
+@media (max-width: 600px) {
+    #login > .left-card {
+        display: none;
+    }
+}
+
+#login > #login-form {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    width: 50%;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+}
+
+#login > #login-form > #actions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#login > #login-form > #actions > * {
+    width: 50%;
+    font-size: large;
+    outline: none;
+    border: none;
+    padding: 4px;
+    font-weight: 600;
+}
+#login > #login-form > #actions > button:hover {
+    cursor: pointer;
+    filter: contrast(1.4);
+}
+
+#login > #login-form #login-btn {
+    background-color: var(--bg-alt-primary);
+    color: white;
+}
+#login > #login-form #signup-btn {
+    background-color: transparent;
+    color: rgb(0, 174, 255);
+}
+
+/*
+---- SIGNUP STYLE
+*/
+#signup {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#signup > * {
+    height: 100%;
+}
+
+#signup > .right-card {
+    flex-grow: 1;
+    background-color: var(--bg-alt-primary);
+}
+
+@media (max-width: 600px) {
+    #signup > .right-card {
+        display: none;
+    }
+}
+
+#signup > #signup-form {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    width: 60%;
+    justify-content: center;
+    gap: 10px;
+    max-width: 800px;
+}
+
+#signup > #signup-form > #name {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+#signup > #signup-form > #name > * {
+    width: 50%;
+}
+
+#signup > #signup-form > #actions > #signup-btn {
+    float: right;
+    background-color: var(--bg-alt-primary);
+    color: white;
+    font-size: large;
+    outline: none;
+    border: none;
+    padding: .4rem;
+    width: 30%;
+    font-weight: 600;
+}
+
+#signup > #signup-form > #actions > #signup-btn:hover {
+    cursor: pointer;
+    filter: contrast(1.4);
+}
+
+#signup > #signup-form > #password-strength,
+#signup > #signup-form > #password-strength[data-strength="low"] {
+    width: 20%;
+    height: 4px;
+    background-color: red;
+}
+#signup > #signup-form > #password-strength[data-strength="mid"] {
+    width: 40%;
+    background-color: orange;
+}
+#signup > #signup-form > #password-strength[data-strength="high"] {
+    width: 60%;
+    background-color: green;
+}
+
+#signup input.error {
+    position: relative;
+    border-color: red;
+}

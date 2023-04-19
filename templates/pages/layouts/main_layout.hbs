@@ -1,0 +1,13 @@
+{{#*inline "content"}}
+<nav id="nav">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/advice">Health Advice</a>
+    <a href="/news">News</a>
+    <a href="/alerts">Alerts</a>
+    {{#unless uid}}
+        <a href="/login">Login</a>
+    {{/unless}}
+</nav>
+{{> page}}
+{{/inline}}
+{{> base_layout}}
